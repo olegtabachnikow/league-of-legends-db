@@ -1,0 +1,11 @@
+.filter-input {
+    border: 1px solid rgb(0, 9, 19);
+    width: 30%;
+    padding: 10px 15px;
+    outline: none;
+}
+.filter-input::placeholder {
+    font-style: italic;
+    opacity: .5;
+    text-align: center;
+}

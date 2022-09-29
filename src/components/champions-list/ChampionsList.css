@@ -1,0 +1,28 @@
+.champion-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin: 0 auto;
+  animation: fadeOut 0.7s linear;
+  justify-content: center;
+  gap: 15px;
+}
+.champion-list_faded {
+  animation: fadeIn 0.5s linear;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
