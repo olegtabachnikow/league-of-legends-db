@@ -165,6 +165,41 @@
   margin-bottom: 20px;
   flex-direction: row;
 }
+.champion-difficulty__graph {
+  opacity: .2;
+  width: 30px;
+  height: 20px;
+  transform: skew(40deg);
+  background-color: rgb(8, 215, 247);
+}
+.champion-difficulty__graph_active {
+  opacity: 1;
+}
+.champion-text {
+  text-transform: uppercase;
+  font-size: .8rem;
+  line-height: 20px;
+}
+.champion-text_yellow {
+  color: rgb(208, 168, 92);
+}
+.champion-difficulty__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.champion-difficulty__graph-box {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  margin-bottom: 1rem;
+}
+.champion-stats-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
 @keyframes borders {
   0% {
     width: 0;

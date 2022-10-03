@@ -2,6 +2,7 @@
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  margin: 5px;
 }
 .character-grid-item__corner {
   border-left: 20px solid transparent;

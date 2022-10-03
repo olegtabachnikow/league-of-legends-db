@@ -1,6 +1,7 @@
 import React from "react";
 import "./FilterInput.css";
 import PropTypes from "prop-types";
+import searchIcon from '../../images/search-icon.svg';
 
 function FilterInput({ getFilterData, getFilterByTag }) {
   const debounce = (fn, delay) => {
@@ -16,7 +17,8 @@ function FilterInput({ getFilterData, getFilterByTag }) {
   );
   return (
     <label className="filter-label">
-      <input className="filter-input" type="text" onKeyUp={debouncedHandler} placeholder="Search by champion name"/>
+      <img className="filter-icon" src={searchIcon} alt="search" />
+      <input className="filter-input" type="text" onKeyUp={debouncedHandler} placeholder="Search"/>
     </label>
   );
 }

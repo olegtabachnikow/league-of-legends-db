@@ -1,11 +1,16 @@
-export const getChampions = () =>
-  fetch(
+export async function getChampions() {
+  const response = await fetch(
     "http://ddragon.leagueoflegends.com/cdn/12.18.1/data/en_US/champion.json"
-  ).then(checkResponce);
-export const getCurrentChampion = (championName) =>
-  fetch(
+  );
+  return checkResponce(response);
+}
+
+export async function getCurrentChampion(championName) {
+  const response = await fetch(
     `http://ddragon.leagueoflegends.com/cdn/12.18.1/data/en_US/champion/${championName}.json`
-  ).then(checkResponce);
+  );
+  return checkResponce(response);
+}
 
 function checkResponce(res) {
   if (res.ok) {

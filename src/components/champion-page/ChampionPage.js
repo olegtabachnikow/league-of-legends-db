@@ -18,6 +18,7 @@ function ChampionPage() {
   const [imageCounter, setImageCounter] = React.useState(0);
   const [description, setDescription] = React.useState("");
   const [currentRoles, setCurrentRoles] = React.useState([]);
+  const [currentDifficulty, setCurrentDifficulty] = React.useState(0);
   const currentChampion = useSelector((state) => state.currentChampion);
   const championName = useParams();
   const navigate = useNavigate();
@@ -29,11 +30,11 @@ function ChampionPage() {
       .then((res) => {
         setCharacter(res.data[currentName]);
         setCurrentRoles(Object.values(res.data[currentName].tags));
+        setCurrentDifficulty(res.data[currentName].info.difficulty);
       })
       .catch((err) => {
         setIsLoading(false);
-        navigate("/champions/");
-        console.log(err);
+        navigate("/error-page");
       });
   }
 
@@ -43,7 +44,7 @@ function ChampionPage() {
     return arr.join("");
   }
   React.useEffect(() => {
-    const loadTimeout = setTimeout(setIsLoading, 1000, false);
+    const loadTimeout = setTimeout(setIsLoading, 1500, false);
     return () => clearTimeout(loadTimeout);
   }, []);
   React.useEffect(() => {
@@ -68,7 +69,15 @@ function ChampionPage() {
         return null;
     }
   }
-
+  function getCurrentDifficultyWord() {
+    if (currentDifficulty >= 4 && currentDifficulty <= 7) {
+      return "Moderate";
+    } else if (currentDifficulty >= 8) {
+      return "High";
+    } else {
+      return "Low";
+    }
+  }
   return (
     <section className="champion-page">
       {isLoading ? (
@@ -124,20 +133,48 @@ function ChampionPage() {
                 {currentChampion.lore}
               </p>
               <div className="champion-skills">
-                <div className="champion-roles-box">
-                  {currentRoles.length &&
-                    currentRoles.map((el, i) => {
-                      return (
-                        <div key={i} className="champion-role-container">
-                          <img
-                            className="class-icon"
-                            src={getRole(el)}
-                            alt={el}
-                          />
-                          <span>{el}</span>
-                        </div>
-                      );
-                    })}
+                <div className="champion-stats-box">
+                  <div className="champion-roles-box">
+                    {currentRoles.length &&
+                      currentRoles.map((el, i) => {
+                        return (
+                          <div key={i} className="champion-role-container">
+                            <img
+                              className="class-icon"
+                              src={getRole(el)}
+                              alt={el}
+                            />
+                            <span className="champion-text">Role</span>
+                            <span className="champion-text champion-text_yellow">
+                              {el}
+                            </span>
+                          </div>
+                        );
+                      })}
+                  </div>
+                  <div className="champion-difficulty">
+                    <div className="champion-difficulty__box">
+                      <div className="champion-difficulty__graph-box">
+                        <span className="champion-difficulty__graph champion-difficulty__graph_active" />
+                        <span
+                          className={`champion-difficulty__graph ${
+                            currentDifficulty >= 4 &&
+                            "champion-difficulty__graph_active"
+                          }`}
+                        />
+                        <span
+                          className={`champion-difficulty__graph ${
+                            currentDifficulty >= 8 &&
+                            "champion-difficulty__graph_active"
+                          }`}
+                        />
+                      </div>
+                      <span className="champion-text">Difficulty</span>
+                      <span className="champion-text champion-text_yellow">
+                        {getCurrentDifficultyWord()}
+                      </span>
+                    </div>
+                  </div>
                 </div>
                 <SkillSet
                   description={description}

@@ -4,6 +4,7 @@ import ChampionsList from "../champions-list/ChampionsList";
 import { setCharacters } from "../../actions/actions";
 import { getChampions } from "../../utils/riot-api";
 import ChampionPage from "../champion-page/ChampionPage";
+import ErrorPage from "../error-page/ErrorPage";
 import './App.css';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route path="/champions" element={<ChampionsList />} />
           <Route path="/champions/:championName" element={<ChampionPage />} />
+          <Route path="/error-page" element={<ErrorPage/>}/>
         </Routes>
       </main>
     </div>
