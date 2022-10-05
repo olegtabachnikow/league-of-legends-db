@@ -1,3 +1,11 @@
-const roleTags = ['All','Assassin', 'Fighter', 'Mage' ,'Marksman', 'Support'];
+const roleTags = [
+  "All",
+  "Assassin",
+  "Fighter",
+  "Mage",
+  "Marksman",
+  "Support",
+  "Tank",
+];
 
 export default roleTags;

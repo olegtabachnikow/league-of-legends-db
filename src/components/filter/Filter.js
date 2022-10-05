@@ -5,6 +5,7 @@ import FilterInput from "../filter-input/FilterInput";
 import { useSelector } from "react-redux";
 import roleTags from "../../constants/constants";
 import PropTypes from "prop-types";
+import FilterDifficulty from "../filter-difficulty/FilterDifficulty";
 
 function Filter({ setIsFaded, setCurrentChampionList }) {
   const [currentTag, setCurrentTag] = React.useState("All");
@@ -51,6 +52,7 @@ function Filter({ setIsFaded, setCurrentChampionList }) {
           );
         })}
       </div>
+      <FilterDifficulty />
     </div>
   );
 }

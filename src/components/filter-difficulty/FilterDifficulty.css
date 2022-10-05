@@ -1,0 +1,33 @@
+.filter-difficulty {
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.filter-difficulty__select {
+    background-color: #fff;
+    display: none;
+}
+.filter-difficulty__select_active {
+    display: block;
+}
+.filter-difficulty__button {
+    cursor: pointer;
+    padding: 0 0 0 20px;
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid rgb(208, 168, 92);
+    height: 60%;
+    transition: height .3s linear;
+}
+.filter-difficulty__button:hover {
+    height: 100%;
+}
+.filter-difficulty__list {
+    list-style: none;
+    position: absolute;
+    bottom: -120%;
+    left: 0;
+    padding: 0;
+    z-index: 10;
+}

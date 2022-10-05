@@ -1,10 +1,11 @@
 .champion-list {
   display: flex;
   flex-wrap: wrap;
-  animation: fadeOut 0.7s linear;
+  animation: fadeOut 0.7s linear forwards;
   margin: 0 auto;
   max-width: 80%;
   padding: 5px;
+  opacity: 0;
   box-sizing: border-box;
   justify-content: center;
 }
