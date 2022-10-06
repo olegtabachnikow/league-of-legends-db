@@ -5,7 +5,7 @@ import { setCharacters } from "../../actions/actions";
 import { getChampions } from "../../utils/riot-api";
 import ChampionPage from "../champion-page/ChampionPage";
 import ErrorPage from "../error-page/ErrorPage";
-import './App.css';
+import "./App.css";
 
 function App() {
   const location = useLocation();
@@ -23,13 +23,17 @@ function App() {
     getAllChampions();
   }, []);
   return (
-    <div className={`app ${location.pathname === "/champions/" && "app_color_white"}`}>
+    <div
+      className={`app ${
+        location.pathname === "/champions/" && "app_color_white"
+      }`}
+    >
       <header className="App-header"></header>
       <main className="app__main">
         <Routes>
           <Route path="/champions" element={<ChampionsList />} />
           <Route path="/champions/:championName" element={<ChampionPage />} />
-          <Route path="/error-page" element={<ErrorPage/>}/>
+          <Route path="/error-page" element={<ErrorPage />} />
         </Routes>
       </main>
     </div>

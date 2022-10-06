@@ -3,14 +3,9 @@
     display: flex;
     position: relative;
     align-items: center;
+    width: 20%;
 }
-.filter-difficulty__select {
-    background-color: #fff;
-    display: none;
-}
-.filter-difficulty__select_active {
-    display: block;
-}
+
 .filter-difficulty__button {
     cursor: pointer;
     padding: 0 0 0 20px;
@@ -18,6 +13,7 @@
     border: none;
     border-left: 1px solid rgb(208, 168, 92);
     height: 60%;
+    width: 100%;
     transition: height .3s linear;
 }
 .filter-difficulty__button:hover {
@@ -26,8 +22,18 @@
 .filter-difficulty__list {
     list-style: none;
     position: absolute;
-    bottom: -120%;
+    display: none;
+    flex-direction: column;
     left: 0;
+    top: 100%;
     padding: 0;
     z-index: 10;
+    width: calc(100% + 41px);
+    margin: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid rgb(208, 168, 92);
+}
+.filter-difficulty__list_active{
+    display: flex;
 }

@@ -1,13 +1,11 @@
 .champion-list {
-  display: flex;
-  flex-wrap: wrap;
-  animation: fadeOut 0.7s linear forwards;
-  margin: 0 auto;
   max-width: 80%;
-  padding: 5px;
+  margin: 0 auto;
+  animation: fadeOut 0.7s linear forwards;
   opacity: 0;
-  box-sizing: border-box;
-  justify-content: center;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(5, 1fr);
 }
 .champion-list_faded {
   animation: fadeIn 0.5s linear;

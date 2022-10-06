@@ -15,10 +15,40 @@ const setCharacterAction = (payload) => {
   };
 };
 
-export const { setCharacters, setCharacter } = bindActionCreators(
+const setCurrentDifficultyAction = (payload) => {
+  return {
+    type: "DIFFICULTY/SET",
+    payload,
+  };
+};
+
+const setSearchTagAction = (payload) => {
+  return {
+    type: "SEARCH_TAG/SET",
+    payload,
+  };
+};
+
+const setCurrentChampionListAction = (payload) => {
+  return {
+    type: "CHARACTERS_CURRENT_LIST/SET",
+    payload,
+  };
+};
+
+export const {
+  setCharacters,
+  setCharacter,
+  setDifficulty,
+  setSearchTag,
+  setCurrentChampionList,
+} = bindActionCreators(
   {
     setCharacters: setCharactersAction,
     setCharacter: setCharacterAction,
+    setDifficulty: setCurrentDifficultyAction,
+    setSearchTag: setSearchTagAction,
+    setCurrentChampionList: setCurrentChampionListAction,
   },
   dispatch
 );

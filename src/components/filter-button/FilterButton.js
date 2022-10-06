@@ -1,14 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./FilterButton.css";
+import { useSelector } from "react-redux";
+import { setSearchTag } from "../../actions/actions";
 
-function FilterButton({ tag, currentTag, setCurrentTag, getFilterByTag }) {
+function FilterButton({ tag }) {
+  const searchTag = useSelector((state) => state.searchTag);
   function handleClick() {
-    getFilterByTag(tag);
-    setCurrentTag(tag);
+    setSearchTag(tag);
   }
   return (
-    <button className={`filter-button ${currentTag === tag && "filter-button_active"}`} onClick={handleClick} type="button">
+    <button
+      className={`filter-button ${searchTag === tag && "filter-button_active"}`}
+      onClick={handleClick}
+      type="button"
+    >
       {tag}
     </button>
   );
@@ -16,9 +22,6 @@ function FilterButton({ tag, currentTag, setCurrentTag, getFilterByTag }) {
 
 FilterButton.propTypes = {
   tag: PropTypes.string.isRequired,
-  currentTag: PropTypes.string.isRequired,
-  getFilterByTag: PropTypes.func.isRequired,
-  setCurrentTag: PropTypes.func.isRequired
 };
 
 export default FilterButton;
