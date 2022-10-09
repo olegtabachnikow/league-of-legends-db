@@ -29,7 +29,7 @@ function currentChampionReducer(state = {}, action) {
 function currentChampionListReducer(state = [], action) {
   switch (action.type) {
     case "CHARACTERS_CURRENT_LIST/SET":
-      return action.payload;
+      return [...action.payload];
     default:
       return state;
   }

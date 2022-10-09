@@ -3,7 +3,11 @@ import "./Filter.css";
 import FilterButton from "../filter-button/FilterButton";
 import FilterInput from "../filter-input/FilterInput";
 import { useSelector } from "react-redux";
-import { setDifficulty, setSearchTag, setCurrentChampionList } from "../../actions/actions";
+import {
+  setDifficulty,
+  setSearchTag,
+  setCurrentChampionList,
+} from "../../actions/actions";
 import roleTags from "../../constants/constants";
 import PropTypes from "prop-types";
 import FilterDifficulty from "../filter-difficulty/FilterDifficulty";
@@ -14,23 +18,22 @@ function Filter({ setIsFaded }) {
   const searchTag = useSelector((state) => state.searchTag);
 
   React.useEffect(() => {
-    handleFilter(searchTag);
+    searchTag.length && handleFilter();
   }, [searchTag, difficulty]);
 
   function getFilterData(text) {
+    setSearchTag("");
+    setDifficulty(0);
     setIsFaded(true);
     if (text.trim().length > 0) {
       const filteredArray = champions.filter((el) =>
-        el.name.toLowerCase().includes(text)
+        el.name.toLowerCase().includes(text.toLowerCase())
       );
       setTimeout(fadedFilterResults, 500, filteredArray);
-      setSearchTag("");
-      setDifficulty(0);
-    } else {
-      setTimeout(fadedFilterResults, 500, champions);
-      setSearchTag("All");
-      setDifficulty(0);
+      return;
     }
+    setSearchTag("All");
+    setDifficulty(0);
   }
   function fadedFilterResults(arr) {
     setCurrentChampionList(arr);
@@ -55,17 +58,21 @@ function Filter({ setIsFaded }) {
       filteredArray = champions;
     }
     if (difficulty === 0) {
-      filteredArray.length
-        ? setTimeout(fadedFilterResults, 500, filteredArray)
-        : setTimeout(fadedFilterResults, 500, champions);
+      setTimeout(
+        fadedFilterResults,
+        500,
+        filteredArray.length ? filteredArray : champions
+      );
       return;
     }
     const newFilteredArray = filteredArray.filter((el) =>
       countChampionDifficulty().includes(el.info.difficulty)
     );
-    newFilteredArray.length
-      ? setTimeout(fadedFilterResults, 500, newFilteredArray)
-      : setTimeout(fadedFilterResults, 500, champions);
+    setTimeout(
+      fadedFilterResults,
+      500,
+      newFilteredArray.length ? newFilteredArray : champions
+    );
   }, [searchTag, difficulty]);
 
   return (
