@@ -84,45 +84,48 @@ function ChampionPage() {
         <Preloader />
       ) : (
         <div className="champion-info">
-          <div className="champion-card">
-            <img
-              className="champion-card__image"
-              src={
-                !!currentChampion.id
-                  ? `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${currentChampion.id}_${imageCounter}.jpg`
-                  : null
-              }
-              alt={currentChampion.name}
-            />
-            <div className="champion-info__skins-container">
-              <p className="champion-info__skins-title">
-                AVAILABLE <br />
-                SKINS
-              </p>
-              <div className="champion-info__available-skins">
-                {!!currentChampion.skins &&
-                  currentChampion.skins.map((el) => {
-                    return (
-                      <button
-                        className={`champion-info__skin ${
-                          imageCounter === el.num &&
-                          "champion-info__skin_active"
-                        }`}
-                        onClick={() => setImageCounter(el.num)}
-                        key={el.num}
-                      >
-                        <img
-                          className="champion-info__skin-image"
-                          src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${currentChampion.id}_${el.num}.jpg`}
-                          alt={el.name}
-                        />
-                        {el.name === "default" ? currentChampion.name : el.name}
-                      </button>
-                    );
-                  })}
+            <div className="champion-card">
+              <img
+                className="champion-card__image"
+                src={
+                  !!currentChampion.id
+                    ? `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${currentChampion.id}_${imageCounter}.jpg`
+                    : null
+                }
+                alt={currentChampion.name}
+              />
+              <div className="champion-info__skins-container">
+                <p className="champion-info__skins-title">
+                  AVAILABLE <br />
+                  SKINS
+                </p>
+                <div className="champion-info__available-skins">
+                  {!!currentChampion.skins &&
+                    currentChampion.skins.map((el) => {
+                      return (
+                        <button
+                          className={`champion-info__skin ${
+                            imageCounter === el.num &&
+                            "champion-info__skin_active"
+                          }`}
+                          onClick={() => setImageCounter(el.num)}
+                          key={el.num}
+                        >
+                          <img
+                            className="champion-info__skin-image"
+                            src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${currentChampion.id}_${el.num}.jpg`}
+                            alt={el.name}
+                          />
+                          {el.name === "default"
+                            ? currentChampion.name
+                            : el.name}
+                        </button>
+                      );
+                    })}
+                </div>
               </div>
             </div>
-          </div>
+            <div className="champion-background" style={{backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${currentChampion.id}_${imageCounter}.jpg)`}}/> 
           <div className="champion-description">
             <div className="champion-titles">
               <h2 className="champion__subtitle">{currentChampion.title}</h2>

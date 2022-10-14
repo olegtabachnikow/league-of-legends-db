@@ -6,6 +6,7 @@ export const reducer = combineReducers({
   currentDifficulty: currentDifficultyReducer,
   searchTag: setSearchTagReducer,
   currentChampionList: currentChampionListReducer,
+  itemList: setItemListReducer,
 });
 
 function championsReducer(state = [], action) {
@@ -47,6 +48,15 @@ function currentDifficultyReducer(state = 0, action) {
 function setSearchTagReducer(state = "All", action) {
   switch (action.type) {
     case "SEARCH_TAG/SET":
+      return action.payload;
+    default:
+      return state;
+  }
+}
+
+function setItemListReducer(state = [], action) {
+  switch (action.type) {
+    case "ITEM_LIST/SET":
       return action.payload;
     default:
       return state;

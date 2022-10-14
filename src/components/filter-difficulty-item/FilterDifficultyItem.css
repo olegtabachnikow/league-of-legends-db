@@ -16,6 +16,9 @@
     background-color: rgb(8, 215, 247);
     opacity: .2;
 }
+.filter-difficulty__graph-text{
+    text-transform: uppercase;
+}
 .filter-difficulty__graph_active {
     opacity: 1;
 }

@@ -36,14 +36,23 @@ const setCurrentChampionListAction = (payload) => {
   };
 };
 
+const setItemListAction = (payload) => {
+  return {
+    type: "ITEM_LIST/SET",
+    payload,
+  };
+};
+
 export const {
   setCharacters,
   setCharacter,
   setDifficulty,
   setSearchTag,
   setCurrentChampionList,
+  setItemList,
 } = bindActionCreators(
   {
+    setItemList: setItemListAction,
     setCharacters: setCharactersAction,
     setCharacter: setCharacterAction,
     setDifficulty: setCurrentDifficultyAction,
