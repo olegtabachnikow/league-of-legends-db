@@ -6,6 +6,7 @@ import { setItemList } from "../../actions/actions";
 import { useSelector } from "react-redux";
 import ItemCategory from "../item-category/ItemCategory";
 import ItemCost from "../item-cost/ItemCost";
+import lolLogo from "../../images/lol-logo.png";
 
 function ItemList() {
   const [currentItem, setCurrentItem] = React.useState({});
@@ -36,7 +37,6 @@ function ItemList() {
           return { id: el[0], ...el[1] };
         });
         setItemList(arr);
-        console.log(arr);
       })
       .catch((err) => console.log(err));
   }
@@ -44,7 +44,9 @@ function ItemList() {
     <section className="item-list">
       <div className="item-list__current-item-container">
         <div className="item-list__current">
-          <h1 className="item-list__current-title">{currentItem.name}</h1>
+          <h1 className="item-list__current-title">
+            {currentItem.name || "Select Item"}
+          </h1>
           <p className="item-list__current__plaintext">
             {currentItem.plaintext}
           </p>
@@ -52,12 +54,16 @@ function ItemList() {
             <figure className="item-list__current-image-wrapper">
               <img
                 className="item-list__current-image"
-                src={`http://ddragon.leagueoflegends.com/cdn/12.19.1/img/item/${currentItem.id}.png`}
+                src={
+                  currentItem.id
+                    ? `http://ddragon.leagueoflegends.com/cdn/12.19.1/img/item/${currentItem.id}.png`
+                    : lolLogo
+                }
                 alt=""
               />
             </figure>
             <div className="item-list__current-cost">
-              <ItemCost currentItem={currentItem}/>
+              <ItemCost currentItem={currentItem} />
             </div>
           </div>
           <div
@@ -94,10 +100,52 @@ function ItemList() {
           </div>
         </div>
       </div>
-      <div className="item-list__starter">
+      <div className="item-list__categories">
         <ItemCategory
           filterCase="START"
           title="starter items"
+          handleItemList={handleItemList}
+          setCurrentItem={setCurrentItem}
+        />
+        <ItemCategory
+          filterCase="BASIC"
+          title="basic items"
+          handleItemList={handleItemList}
+          setCurrentItem={setCurrentItem}
+        />
+        <ItemCategory
+          filterCase="EPIC"
+          title="epic items"
+          handleItemList={handleItemList}
+          setCurrentItem={setCurrentItem}
+        />
+        <ItemCategory
+          filterCase="MYTHIC"
+          title="mythic items"
+          handleItemList={handleItemList}
+          setCurrentItem={setCurrentItem}
+        />
+        <ItemCategory
+          filterCase="BOOTS"
+          title="boots"
+          handleItemList={handleItemList}
+          setCurrentItem={setCurrentItem}
+        />
+        <ItemCategory
+          filterCase="CONSUMABLE"
+          title="potions and consumables"
+          handleItemList={handleItemList}
+          setCurrentItem={setCurrentItem}
+        />
+        <ItemCategory
+          filterCase="TRINKET"
+          title="trinkets"
+          handleItemList={handleItemList}
+          setCurrentItem={setCurrentItem}
+        />
+        <ItemCategory
+          filterCase="OTHER"
+          title="other"
           handleItemList={handleItemList}
           setCurrentItem={setCurrentItem}
         />

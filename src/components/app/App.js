@@ -36,6 +36,7 @@ function App() {
           <Route path="/champions" element={<ChampionsList />} />
           <Route path="/champions/:championName" element={<ChampionPage />} />
           <Route path="/error-page" element={<ErrorPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </main>
     </div>

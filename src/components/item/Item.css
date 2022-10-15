@@ -1,5 +1,9 @@
+.item {
+    position: relative;
+}
 .item__image {
     width: 40px;
     height: 40px;
     cursor: pointer;
+    position: relative;
 }
