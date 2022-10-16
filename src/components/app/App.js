@@ -7,6 +7,7 @@ import ChampionPage from "../champion-page/ChampionPage";
 import ErrorPage from "../error-page/ErrorPage";
 import "./App.css";
 import ItemList from "../item-list/ItemList";
+import MainPage from "../main-page/MainPage";
 
 function App() {
   const location = useLocation();
@@ -32,6 +33,7 @@ function App() {
       <header className="App-header"></header>
       <main className="app__main">
         <Routes>
+          <Route path="/" element={<MainPage/>}/>
           <Route path="/items" element={<ItemList />} />
           <Route path="/champions" element={<ChampionsList />} />
           <Route path="/champions/:championName" element={<ChampionPage />} />

@@ -6,6 +6,8 @@ export function filterItemsCategory(items, filterCase) {
       return filterBasicItems(items);
     case "EPIC":
       return filterEpicItems(items);
+    case "LEGENDARY":
+      return filterLegendaryItems(items);
     case "MYTHIC":
       return filterMythicItems(items);
     case "BOOTS":
@@ -14,8 +16,8 @@ export function filterItemsCategory(items, filterCase) {
       return filterConsumableItems(items);
     case "TRINKET":
       return filterTrinketItems(items);
-      case "OTHER":
-        return filterOtherItems(items);
+    case "OTHER":
+      return filterOtherItems(items);
     default:
       return items;
   }
@@ -58,12 +60,29 @@ function filterBasicItems(items) {
 function filterEpicItems(items) {
   const arr = items.filter(
     (el) =>
-      el.depth === 3 &&
+      el.depth === 2 &&
       !el.tags.includes("Boots") &&
-      !el.tags.includes("Consumable")
+      !el.tags.includes("Consumable") &&
+      !el.id.includes(3031) && 
+      !el.id.includes(3089)
   );
   return sortFilteredData(arr);
 }
+
+function filterLegendaryItems(items) {
+  const arr = items.filter(
+    (el) =>
+      el.depth === 3 &&
+      !el.tags.includes("Boots") &&
+      !el.tags.includes("Consumable") &&
+      !el.id.includes(4644) &&
+      !el.description.includes("Mythic")
+  );
+  arr.push(items.find((el) => el.id.includes(3031)));
+  arr.push(items.find((el) => el.id.includes(3089)));
+  return sortFilteredData(arr);
+}
+
 function filterMythicItems(items) {
   const arr = items.filter(
     (el) =>
@@ -110,7 +129,9 @@ export function filterSpecialRecipe(boolean, array, item) {
 }
 
 function filterOtherItems(items) {
-  const arr = items.filter((el) => el.tags.includes("OnHit") && el.description === "");
+  const arr = items.filter(
+    (el) => el.tags.includes("OnHit") && el.description === ""
+  );
   return sortFilteredData(arr);
 }
 

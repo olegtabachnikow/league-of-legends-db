@@ -7,6 +7,7 @@
   align-items: center;
   border: 1px solid transparent;
   transition: all 0.3s linear;
+  cursor: pointer;
 }
 .skill-button img {
   -webkit-user-drag: none;

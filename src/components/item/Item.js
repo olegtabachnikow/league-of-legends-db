@@ -29,6 +29,7 @@ function Item({ item, handleItemList, setCurrentItem }) {
       ? handleItemList(false, item.from)
       : handleItemList(false, filterSpecialRecipe(false, itemList, item) || []);
     setCurrentItem(item);
+    window.scrollTo({top: 0,  behavior: 'smooth'});
   }
   return (
     <div

@@ -1,0 +1,107 @@
+.main-page {
+  max-width: 1440px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../../images/lol-logo-black.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+.main-page__logo-box {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.main-page__logo {
+  width: 40%;
+  -webkit-user-drag: none;
+}
+.main-page__title {
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 20px;
+  user-select: none;
+  margin-top: 20px;
+  transition: all 1s linear;
+  transform: translateX(-200%);
+}
+.main-page__title_active {
+    transform: translate(0);
+}
+.main-page__title_moved {
+    transform: translateX(200%);
+}
+.main-page__subtitle_active {
+    transform: translateY(-200px);
+    opacity: 0;
+}
+.main-page__ahri {
+  width: 200px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+  transform: translateY(120%);
+  transition: all 1s linear;
+  object-fit: contain;
+  -webkit-user-drag: none;
+}
+.main-page__ahri_active {
+  transform: translateY(30%);
+}
+.main-page__crystal-orb {
+  width: 120px;
+  position: absolute;
+  cursor: pointer;
+  transition: all 2s linear;
+  bottom: 250px;
+  -webkit-user-drag: none;
+}
+.main-page__crystal-orb:hover {
+  filter: drop-shadow(0 0 15px rgb(10, 10, 227));
+}
+.main-page__crystal-orb_active {
+    animation: rotateOrb 0.3s linear infinite;
+    width: 70px;
+    bottom: 50px;
+}
+.main-page__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.main-page__char-box {
+  width: 300px;
+  min-height: 70%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  margin-bottom: 60px;
+  margin-top: auto;
+}
+.main-page__subtitle {
+  color: #fff;
+  transition: all 1s linear;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-style: italic;
+}
+@keyframes rotateOrb {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+

@@ -6,13 +6,13 @@
   border: 1px solid rgba(255, 255, 255, 0.4);
   background-color: #000;
   padding: 5px;
+  z-index: 10;
 }
 .item-popup_active {
   display: flex;
   font-size: 0.8rem;
   bottom: 50px;
   left: 50px;
-  z-index: 10;
 }
 .item-popup_active-reverse-x {
   left: -320px;
@@ -23,6 +23,7 @@
 }
 .item-popup__title {
   text-transform: uppercase;
+  text-align: center;
   font-style: italic;
   font-size: 1.5rem;
   width: 100%;
