@@ -21,7 +21,7 @@
   opacity: 0;
 }
 .ahri__subtitle_active {
-  transform: translateY(-200px);
+  transform: translateY(-150px);
   opacity: 0;
 }
 .ahri__image {
@@ -67,18 +67,18 @@
 }
 .ahri__char-box {
   width: 100%;
+  max-width: 450px;
   height: 100%;
-  min-height: 300px;
+  min-height: 400px;
   display: flex;
   justify-content: center;
   position: relative;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
-  margin-bottom: 60px;
 }
 .ahri__subtitle {
   color: #fff;
-  transition: all 1s linear;
+  transition: all .5s linear;
   text-transform: uppercase;
   font-size: 1rem;
   font-style: italic;
@@ -90,11 +90,11 @@
   bottom: 0;
   justify-content: center;
   z-index: 0;
-  transform: translateY(120%);
+  transform: translateY(120%) translateX(-10%);
   transition: all 1s cubic-bezier(.37,.37,.28,1);
 }
 .ahri__tail-box_active {
-  transform: translateY(0);
+  transform: translateY(0) translateX(-10%);
 }
 .ahri__tail {
   position: absolute;
@@ -104,33 +104,114 @@
   transform: translateX(-50%);
   max-height: 300px;
   transition: all 1s cubic-bezier(.37,.37,.28,1);
+  -webkit-user-drag: none;
+}
+.ahri__tail:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
 }
 .ahri__tail-1 {
-  transform: translateX(20%) translateY(30%) rotate(80deg);
+  transform: translateX(20%) translateY(20%) rotate(120deg);
 }
 .ahri__tail-2 {
-  transform: translateX(15%) translateY(10%) rotate(70deg);
+  transform: translateX(15%) translateY(10%) rotate(100deg);
 }
 .ahri__tail-3 {
-  transform: translateX(5%) rotate(40deg);
+  transform: translateX(5%) rotate(80deg);
 }
 .ahri__tail-4 {
-  transform: translateX(-15%) rotate(15deg);
+  transform: translateX(-15%) translateY(-5%) rotate(50deg);
 }
 .ahri__tail-5 {
-  transform: translateX(-50%);
+  transform: translateX(-40%)  translateY(-5%)rotate(30deg);
 }
 .ahri__tail-6 {
-  transform: translateX(-65%) translateY(10%) rotate(-15deg);
+  transform: translateX(-65%) translateY(5%) rotate(10deg);
 }
 .ahri__tail-7 {
-  transform: translateX(-90%) translateY(20%) rotate(-15deg);
+  transform: translateX(-90%) translateY(20%) rotate(-5deg);
 }
 .ahri__tail-8 {
   transform: translateX(-90%) translateY(35%) rotate(-30deg);
 }
 .ahri__tail-9 {
-  transform: translateX(-80%) translateY(50%) rotate(-60deg);
+  transform: translateX(-80%) translateY(50%) rotate(-50deg);
+}
+.ahri__mouth {
+  width: 15px;
+  height: 0;
+  background-color: rgb(68, 5, 5);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 25%;
+  left: 48%;
+  z-index: 3;
+  transform: rotate(-5deg);
+}
+.ahri__mouth_active {
+  animation: mouthMove .5s linear .5s infinite;
+}
+.ahri__mouth_not-animated {
+  animation: none;
+}
+.ahri__intro-text {
+  padding: 24px;
+  margin: 0;
+  font-size: 14px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all .1s linear 1s;
+}
+.ahri__intro-text_active {
+  width: auto;
+  height: auto;
+  opacity: 1;
+}
+.ahri__intro-text-container {
+  position: absolute;
+  width: 120px;
+  height: 100px;
+  transform: translateY(30px);
+  opacity: 0;
+  border-radius: 40px;
+  background-color: #fff;
+  transition: all 1s linear;
+}
+.ahri__intro-text-container:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 24px solid #fff;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #fff;
+  border-bottom: 24px solid transparent;
+  right: 45%;
+  bottom: -24px;
+}
+.ahri__intro-text-container_active {
+  width: 400px;
+  transform: translateY(0);
+  opacity: 1;
+}
+.ahri__intro-text-container_moved {
+  transform: translateX(200%);
+  opacity: 0;
+}
+@keyframes mouthMove {
+  0% {
+    height: 0;
+    transform: translateY(-5px) rotate(-5deg);
+  }
+  50% {
+    height: 10px;
+    transform: translateY(0) rotate(-5deg);
+  }
+  100% {
+    height: 0;
+    transform: translateY(-5px) rotate(-5deg);
+  }
 }
 @keyframes rotateOrb {
   0% {
