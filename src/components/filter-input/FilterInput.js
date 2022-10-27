@@ -3,7 +3,7 @@ import "./FilterInput.css";
 import PropTypes from "prop-types";
 import searchIcon from '../../images/search-icon.svg';
 
-function FilterInput({ getFilterData, getFilterByTag }) {
+function FilterInput({ getFilterData }) {
   const debounce = (fn, delay) => {
     let timerId;
     return (...args) => {
