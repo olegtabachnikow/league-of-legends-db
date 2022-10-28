@@ -8,7 +8,7 @@ import {
   setSearchTag,
   setCurrentChampionList,
 } from "../../actions/actions";
-import roleTags from "../../constants/constants";
+import { roleTags } from "../../constants/constants";
 import PropTypes from "prop-types";
 import FilterDifficulty from "../filter-difficulty/FilterDifficulty";
 

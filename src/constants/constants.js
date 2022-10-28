@@ -1,4 +1,4 @@
-const roleTags = [
+export const roleTags = [
   "All",
   "Assassin",
   "Fighter",
@@ -8,4 +8,4 @@ const roleTags = [
   "Tank",
 ];
 
-export default roleTags;
+export const tailsCount = [1, 2, 3, 4, 5, 6, 7, 8, 9];

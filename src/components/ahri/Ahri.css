@@ -50,6 +50,10 @@
   aspect-ratio: 1/1;
   -webkit-user-drag: none;
 }
+.ahri__crystal-orb_moved {
+  width: 70px;
+  animation: rotateOrb 0.3s linear infinite;
+}
 .ahri__orb-container:hover {
   filter: drop-shadow(0 0 15px rgb(10, 10, 227));
 }
@@ -57,6 +61,12 @@
   animation: rotateOrb 0.3s linear infinite;
   width: 70px;
   bottom: 7%;
+}
+.ahri__orb-container_moved {
+  animation: flyToTopOrb 3s linear forwards;
+}
+.ahri__orb-container_hidden {
+  display: none;
 }
 .ahri__container {
   height: 100%;
@@ -161,7 +171,7 @@
   height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all .1s linear 1s;
+  transition: all .5s linear 1s;
 }
 .ahri__intro-text_active {
   width: auto;
@@ -176,7 +186,7 @@
   opacity: 0;
   border-radius: 40px;
   background-color: #fff;
-  transition: all 1s linear;
+  transition: all .5s linear;
 }
 .ahri__intro-text-container:before {
   content: "";
@@ -199,6 +209,9 @@
   transform: translateX(200%);
   opacity: 0;
 }
+.ahri__nav-button {
+  margin-top: 30px;
+}
 @keyframes mouthMove {
   0% {
     height: 0;
@@ -219,5 +232,34 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes flyToTopOrb {
+  0% {
+    bottom: 7%;
+    width: 70px;
+  }
+  25% {
+    bottom: 40%;
+    width: 220px;
+  } 
+  50% {
+    bottom: 50%;
+    width: 220px;
+  } 
+  75% {
+    bottom: 60%;
+    width: 220px;
+    transform: rotate(810deg);
+  }
+  90% {
+    bottom: 65%;
+    width: 220px;
+    transform: rotate(810deg);
+  }
+  100% {
+    bottom: -100%;
+    width: 70px;
+    transform: rotate(810deg);
   }
 }

@@ -1,23 +1,26 @@
 import React from "react";
-import "./MainPageButton.css";
+import "./PageButton.css";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 
-function MainPageButton({ text, destination }) {
+function PageButton({ text, destination, currentClass }) {
   const navigate = useNavigate();
   return (
+    <div className={`page-button__border ${currentClass}`}>
     <button
       onClick={() => navigate(`/${destination}`)}
-      className="main-page-button"
+      className="page-button"
     >
       {text}
     </button>
+    </div>
   );
 }
 
-MainPageButton.propTypes = {
+PageButton.propTypes = {
   text: PropTypes.string.isRequired,
   destination: PropTypes.string.isRequired,
+  currentClass: PropTypes.string.isRequired
 };
 
-export default MainPageButton;
+export default PageButton;
