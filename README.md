@@ -6,11 +6,23 @@ I discovered before, that Riot Games have an awesome API and this is a core of t
 
 ## Available functionality
 
+### Available pages
+
+* ```/``` Main page
+
+* ```/champions/``` List of all champions
+
+* ```/champions/*someChampionName*``` List of some champion selected before
+
+* ```/items/``` List of all items
+
+* ```/error-page``` Error page
+
 ### At the current version the project, you can
 
 * View all champions available in current version of game. Data-dragon API used as source of data.
 
-* Read info about any champion: bio, skills, available skins, role, difficulty.
+* Read info about any champion: bio, skills, available skins, role, difficulty. Champion list support filterin by name / difficulty / role
 
 * View all items available in current version of game.
 
