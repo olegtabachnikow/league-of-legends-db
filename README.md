@@ -42,6 +42,6 @@ ReactJS, Redux, CSS3, HTML5, Javascript.
 
 * Runes page
 
-* App optimisation
+* App optimization
 
 * Unit tests of components
