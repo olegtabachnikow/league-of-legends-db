@@ -1,25 +1,3 @@
-.ahri__title {
-  color: rgba(255, 255, 255, 0.4);
-  font-style: italic;
-  text-transform: uppercase;
-  margin: 0;
-  font-size: 2rem;
-  text-align: center;
-  padding-bottom: 20px;
-  user-select: none;
-  margin-top: 20px;
-  transition: all 1s linear;
-  transform: translateX(-200%);
-  opacity: 0;
-}
-.ahri__title_active {
-  transform: translate(0);
-  opacity: 1;
-}
-.ahri__title_moved {
-  transform: translateX(200%);
-  opacity: 0;
-}
 .ahri__subtitle_active {
   transform: translateY(-150px);
   opacity: 0;
@@ -261,5 +239,16 @@
     bottom: -100%;
     width: 70px;
     transform: rotate(810deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ahri__nav-button_inner {
+    width: calc(100% - 2px);
+    height: 58px;
+  }
+  .ahri__nav-button {
+    width: 60%;
+    height: 60px;
   }
 }

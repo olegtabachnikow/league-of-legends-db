@@ -63,3 +63,13 @@
   );
   background-color: rgba(0, 9, 19, 0.8);
 }
+@media screen and (max-width: 600px) {
+  .page-button {
+    width: 160px;
+    height: 40px;
+  }
+  .page-button__border {
+    width: 162px;
+    height: 42px;
+  }
+}

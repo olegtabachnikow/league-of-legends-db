@@ -8,12 +8,17 @@
   grid-template-columns: repeat(5, 1fr);
   z-index: 0;
 }
+.champion-list__main {
+  padding-top: 90px;
+  position: relative;
+}
 .champion-list_faded {
   animation: fadeIn 0.5s linear;
 }
 .champion-list__preloader-overlay {
   width: 100vw;
   height: 100vh;
+  top: 0;
   position: fixed;
   z-index: 10;
   background-color: #fff;

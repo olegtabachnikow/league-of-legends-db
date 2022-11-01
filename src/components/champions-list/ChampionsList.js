@@ -17,7 +17,7 @@ function ChampionsList() {
   }, []);
 
   return (
-    <>
+    <div className="champion-list__main">
       {isLoading && (
         <div className="champion-list__preloader-overlay">
           <Preloader />
@@ -31,7 +31,7 @@ function ChampionsList() {
             ))
           : champions.map((el) => <CharacterGridItem key={el.key} item={el} />)}
       </section>
-    </>
+    </div>
   );
 }
 

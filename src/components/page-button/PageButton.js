@@ -9,7 +9,7 @@ function PageButton({ text, destination, currentClass }) {
     <div className={`page-button__border ${currentClass}`}>
     <button
       onClick={() => navigate(`/${destination}`)}
-      className="page-button"
+      className={`page-button ${currentClass + "_inner"}`}
     >
       {text}
     </button>

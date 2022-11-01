@@ -82,7 +82,9 @@ function ChampionPage() {
   return (
     <section className="champion-page">
       {isLoading ? (
-        <Preloader />
+        <div className="champion-page__preloader-overlay">
+          <Preloader />
+        </div>
       ) : (
         <div className="champion-info">
           <div className="champion-card">
@@ -101,10 +103,7 @@ function ChampionPage() {
               alt={currentChampion.name}
             />
             <div className="champion-info__skins-container">
-              <p className="champion-info__skins-title">
-                AVAILABLE <br />
-                SKINS
-              </p>
+              <p className="champion-info__skins-title">AVAILABLE SKINS</p>
               <div className="champion-info__available-skins">
                 {!!currentChampion.skins &&
                   currentChampion.skins.map((el) => {

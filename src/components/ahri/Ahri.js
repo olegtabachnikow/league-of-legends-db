@@ -5,8 +5,9 @@ import crystalOrb from "../../images/crystal-orb.png";
 import tail from "../../images/fox-tail.png";
 import { tailsCount } from "../../constants/constants";
 import PageButton from "../page-button/PageButton";
+import PropTypes from "prop-types";
 
-function Ahri() {
+function Ahri({ isVisited, setIsVisited }) {
   const [isStarted, setIsStarted] = React.useState(false);
   const [tailAndBlobActive, setIsTailAndBlobActive] = React.useState(false);
   const [isSecondActionStarted, setIsSecondActionStarted] =
@@ -25,6 +26,17 @@ function Ahri() {
     setTimeout(() => setIsFourthActionStarted(true), 500);
   }
   React.useEffect(() => {
+    if (isVisited) {
+      setIsThirdActionStarted(true);
+      setIsFourthActionStarted(true);
+    }
+  }, [isVisited]);
+
+  React.useEffect(() => {
+    isFourthActionStarted && setIsVisited(true);
+  }, [isFourthActionStarted]);
+
+  React.useEffect(() => {
     if (isStarted) {
       setTimeout(() => setIsTailAndBlobActive(true), 1300);
     } else {
@@ -36,16 +48,9 @@ function Ahri() {
   }, [isSecondActionStarted]);
   return (
     <div className="ahri__container">
-      <h1
-        className={`ahri__title ${isStarted && "ahri__title_active"} ${
-          isSecondActionStarted && "ahri__title_moved"
-        }`}
-      >
-        intro
-      </h1>
-      <h2 className={`ahri__subtitle ${isStarted && "ahri__subtitle_active"}`}>
+      <h1 className={`ahri__subtitle ${isStarted && "ahri__subtitle_active"}`}>
         {!isThirdActionStarted ? "Click an Orb to start" : "Select option"}
-      </h2>
+      </h1>
       {isFourthActionStarted ? (
         <>
           <PageButton
@@ -123,5 +128,10 @@ function Ahri() {
     </div>
   );
 }
+
+Ahri.propTypes = {
+  isVisited: PropTypes.bool.isRequired,
+  setIsVisited: PropTypes.func.isRequired,
+};
 
 export default Ahri;

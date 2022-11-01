@@ -9,8 +9,10 @@ import "./App.css";
 import ItemList from "../item-list/ItemList";
 import MainPage from "../main-page/MainPage";
 import Ahri from "../ahri/Ahri";
+import Header from "../header/Header";
 
 function App() {
+  const [isVisited, setIsVisited] = React.useState(false);
   const location = useLocation();
   function getAllChampions() {
     getChampions()
@@ -31,14 +33,14 @@ function App() {
         location.pathname === "/champions/" && "app_color_white"
       }`}
     >
-      <header className="App-header"></header>
+      <Header />
       <main className="app__main">
         <Routes>
           <Route
             path="/"
             element={
               <MainPage>
-                <Ahri />
+                <Ahri isVisited={isVisited} setIsVisited={setIsVisited}/>
               </MainPage>
             }
           />
