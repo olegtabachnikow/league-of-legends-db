@@ -6,9 +6,17 @@
   display: grid;
   gap: 5px;
   grid-template-columns: repeat(5, 1fr);
+  z-index: 0;
 }
 .champion-list_faded {
   animation: fadeIn 0.5s linear;
+}
+.champion-list__preloader-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  background-color: #fff;
 }
 @keyframes fadeOut {
   0% {
@@ -28,5 +36,24 @@
   100% {
     opacity: 0;
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .champion-list {
+    max-width: 90%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .champion-list {
+    max-width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .champion-list {
+    max-width: 90%;
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -3,6 +3,7 @@
   cursor: pointer;
   overflow: hidden;
   width: 100%;
+  max-width: 308px;
   box-sizing: border-box;
 }
 .character-grid-item__corner {

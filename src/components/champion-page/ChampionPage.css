@@ -234,6 +234,12 @@
   align-items: center;
   width: 100%;
 }
+.champion-page__button {
+  position: absolute!important;
+  top: 4%;
+  right: 2%;
+  font-size: .8rem;
+}
 @keyframes borders {
   0% {
     width: 0;

@@ -59,66 +59,67 @@ function Ahri() {
             currentClass="ahri__nav-button"
           />
         </>
-      ) : 
-      <div className="ahri__char-box">
-        <span
-          className={`ahri__mouth ${
-            tailAndBlobActive && "ahri__mouth_active"
-          } ${isSecondActionStarted && "ahri__mouth_not-animated"}`}
-        ></span>
-        <div
-          className={`ahri__intro-text-container ${
-            tailAndBlobActive && "ahri__intro-text-container_active"
-          } ${isSecondActionStarted && "ahri__intro-text-container_moved"}`}
-        >
-          <p
-            className={`ahri__intro-text ${
-              tailAndBlobActive && "ahri__intro-text_active"
+      ) : (
+        <div className="ahri__char-box">
+          <span
+            className={`ahri__mouth ${
+              tailAndBlobActive && "ahri__mouth_active"
+            } ${isSecondActionStarted && "ahri__mouth_not-animated"}`}
+          ></span>
+          <div
+            className={`ahri__intro-text-container ${
+              tailAndBlobActive && "ahri__intro-text-container_active"
+            } ${isSecondActionStarted && "ahri__intro-text-container_moved"}`}
+          >
+            <p
+              className={`ahri__intro-text ${
+                tailAndBlobActive && "ahri__intro-text_active"
+              }`}
+            >
+              Hello and thanks for viewing this project. I made it with love for
+              the game and development. I really hope you enjoy my work. Click
+              on the orb in my hands to continue
+            </p>
+          </div>
+          <img
+            className={`ahri__image ${isStarted && "ahri__image_active"}`}
+            src={ahri}
+            alt="ahri"
+          />
+          <div
+            className={`ahri__orb-container ${
+              isStarted && "ahri__orb-container_active"
+            } ${isSecondActionStarted && "ahri__orb-container_moved"} ${
+              isThirdActionStarted && "ahri__orb-container_hidden"
             }`}
           >
-            Hello and thanks for viewing this project. I made it with love for
-            the game and development. I really hope you enjoy my work. Click on
-            the orb in my hands to continue
-          </p>
+            <img
+              onClick={handleOrbClick}
+              className={`ahri__crystal-orb ${
+                isSecondActionStarted && "ahri__crystal-orb_moved"
+              }`}
+              src={crystalOrb}
+              alt="crystal orb"
+            />
+          </div>
+          <div
+            className={`ahri__tail-box ${isStarted && "ahri__tail-box_active"}`}
+          >
+            {tailsCount.map((el, i) => {
+              return (
+                <img
+                  key={i}
+                  src={tail}
+                  className={`ahri__tail ${
+                    tailAndBlobActive && `ahri__tail-${el}`
+                  }`}
+                  alt="tail"
+                />
+              );
+            })}
+          </div>
         </div>
-        <img
-          className={`ahri__image ${isStarted && "ahri__image_active"}`}
-          src={ahri}
-          alt="ahri"
-        />
-        <div
-          className={`ahri__orb-container ${
-            isStarted && "ahri__orb-container_active"
-          } ${isSecondActionStarted && "ahri__orb-container_moved"} ${
-            isThirdActionStarted && "ahri__orb-container_hidden"
-          }`}
-        >
-          <img
-            onClick={handleOrbClick}
-            className={`ahri__crystal-orb ${
-              isSecondActionStarted && "ahri__crystal-orb_moved"
-            }`}
-            src={crystalOrb}
-            alt="crystal orb"
-          />
-        </div>
-        <div
-          className={`ahri__tail-box ${isStarted && "ahri__tail-box_active"}`}
-        >
-          {tailsCount.map((el, i) => {
-            return (
-              <img
-                key={i}
-                src={tail}
-                className={`ahri__tail ${
-                  tailAndBlobActive && `ahri__tail-${el}`
-                }`}
-                alt="tail"
-              />
-            );
-          })}
-        </div>
-      </div>}
+      )}
     </div>
   );
 }

@@ -43,7 +43,7 @@
   cursor: pointer;
   filter: drop-shadow(0px 0px 15px #fff);
   transition: all 0.3s linear;
-  animation: makeWider 1s linear 1s forwards;
+  animation: makeWider .5s linear 1s forwards;
   overflow: hidden;
 }
 .error-page__button:hover {
@@ -63,5 +63,26 @@
     width: 200px;
     border-radius: 10px;
     color: #000;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .error-page__container {
+    max-width: 40%;
+  }
+  .error-page__text {
+    font-size: 20rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .error-page__container {
+    max-width: 80%;
+  }
+  .error-page__text {
+    font-size: 15rem;
+  }
+  .error-page__button {
+    top: 120%;
   }
 }

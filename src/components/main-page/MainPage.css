@@ -19,3 +19,9 @@
   width: 40%;
   -webkit-user-drag: none;
 }
+
+@media screen and (max-width: 600px) {
+  .main-page {
+    padding-bottom: 60px;
+  }
+}

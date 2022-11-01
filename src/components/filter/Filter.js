@@ -11,6 +11,7 @@ import {
 import { roleTags } from "../../constants/constants";
 import PropTypes from "prop-types";
 import FilterDifficulty from "../filter-difficulty/FilterDifficulty";
+import FilterTags from "../filter-tags/FilterTags";
 
 function Filter({ setIsFaded }) {
   const champions = useSelector((state) => state.champions);
@@ -80,11 +81,7 @@ function Filter({ setIsFaded }) {
       <div className="triangle triangle-top"></div>
       <div className="triangle triangle-bottom"></div>
       <FilterInput getFilterData={getFilterData} />
-      <div className="champion-filter-button-container">
-        {roleTags.map((el, i) => {
-          return <FilterButton key={i} tag={el} />;
-        })}
-      </div>
+      <FilterTags />
       <FilterDifficulty />
     </div>
   );

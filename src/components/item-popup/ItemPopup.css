@@ -18,7 +18,7 @@
   left: -320px;
 }
 .item-popup_active-reverse-y {
-  bottom:auto;
+  bottom: auto;
   top: 50px;
 }
 .item-popup__title {
@@ -37,4 +37,10 @@
 .item-popup__image {
   width: 40px;
   margin: 10px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .item-popup_active {
+    display: none;
+  }
 }

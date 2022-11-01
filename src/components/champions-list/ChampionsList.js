@@ -3,13 +3,26 @@ import "./ChampionsList.css";
 import CharacterGridItem from "../character-grid-item/CharacterGridItem";
 import { useSelector } from "react-redux";
 import Filter from "../filter/Filter";
+import Preloader from "../preloader/Preloader";
 
 function ChampionsList() {
   const currentChampionList = useSelector((state) => state.currentChampionList);
   const [faded, setIsFaded] = React.useState(false);
   const champions = useSelector((state) => state.champions);
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    const loadTimeout = setTimeout(setIsLoading, 2000, false);
+    return () => clearTimeout(loadTimeout);
+  }, []);
+
   return (
     <>
+      {isLoading && (
+        <div className="champion-list__preloader-overlay">
+          <Preloader />
+        </div>
+      )}
       <Filter setIsFaded={setIsFaded} />
       <section className={`champion-list ${faded && "champion-list_faded"}`}>
         {currentChampionList.length

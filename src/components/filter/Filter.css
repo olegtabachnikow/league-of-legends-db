@@ -9,9 +9,7 @@
   padding: 0 40px;
   position: relative;
   box-sizing: border-box;
-}
-.champion-filter-button-container {
-  height: 100%;
+  z-index: 1;
 }
 .triangle {
   width: 0;
@@ -53,4 +51,14 @@
   border-left: solid 11px transparent;
   top: -21px;
   right: -1px;
+}
+
+@media screen and (max-width: 1000px) {
+  .filter-bar {
+    width: 100%;
+    justify-content:center;
+  }
+  .triangle {
+    display: none;
+  }
 }

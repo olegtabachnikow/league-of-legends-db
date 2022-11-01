@@ -4,10 +4,11 @@ import "./FilterButton.css";
 import { useSelector } from "react-redux";
 import { setSearchTag } from "../../actions/actions";
 
-function FilterButton({ tag }) {
+function FilterButton({ tag, setIsOpen }) {
   const searchTag = useSelector((state) => state.searchTag);
   function handleClick() {
     setSearchTag(tag);
+    setIsOpen(false);
   }
   return (
     <button
@@ -22,6 +23,7 @@ function FilterButton({ tag }) {
 
 FilterButton.propTypes = {
   tag: PropTypes.string.isRequired,
+  setIsOpen: PropTypes.func.isRequired
 };
 
 export default FilterButton;
