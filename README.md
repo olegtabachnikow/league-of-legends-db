@@ -34,7 +34,7 @@ ReactJS, Redux, CSS3, HTML5, Javascript.
 
 ## Features i still working on
 
-* Responsive design
+* Header with navigation bar
 
 * Some additional components for improvment of UI.
 
