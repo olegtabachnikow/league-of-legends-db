@@ -18,6 +18,7 @@ function CharacterGridItem({ item }) {
           className="character-grid-item__image"
           src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${item.id}_0.jpg`}
           alt={item.name}
+          loading="lazy"
         />
         <div />
       </div>

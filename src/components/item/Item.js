@@ -42,6 +42,7 @@ function Item({ item, handleItemList, setCurrentItem }) {
         className="item__image"
         src={`http://ddragon.leagueoflegends.com/cdn/12.19.1/img/item/${item.id}.png`}
         alt={item.name}
+        loading="lazy"
       />
       <ItemPopup
         item={item}

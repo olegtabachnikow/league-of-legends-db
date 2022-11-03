@@ -8,7 +8,6 @@ import {
   setSearchTag,
   setCurrentChampionList,
 } from "../../actions/actions";
-import { roleTags } from "../../constants/constants";
 import PropTypes from "prop-types";
 import FilterDifficulty from "../filter-difficulty/FilterDifficulty";
 import FilterTags from "../filter-tags/FilterTags";
@@ -21,6 +20,11 @@ function Filter({ setIsFaded }) {
   React.useEffect(() => {
     searchTag.length && handleFilter();
   }, [searchTag, difficulty]);
+
+  React.useEffect(() => {
+    setDifficulty(0);
+    setSearchTag("All");
+  }, []);
 
   function getFilterData(text) {
     setSearchTag("");
