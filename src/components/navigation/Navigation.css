@@ -2,6 +2,67 @@
   height: 100%;
   margin-left: auto;
 }
+.navigation__burger-button {
+  width: 45px;
+  height: 45px;
+  border: none;
+  margin-left: auto;
+  margin-right: 10px;
+  border-radius: 50px;
+  border: 3px solid rgb(194, 144, 45);
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.navigation__burger-button-icon {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+  border-left: 3px solid rgb(194, 144, 45);
+  border-bottom: 3px solid rgb(194, 144, 45);
+  top: 8px;
+  left: 12px;
+  transition: all 0.3s linear;
+}
+
+.navigation__burger-button-icon-second {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+  border-left: 3px solid rgb(194, 144, 45);
+  border-bottom: 3px solid rgb(194, 144, 45);
+  top: 8px;
+  left: 12px;
+  transition: all 0.3s linear;
+}
+.navigation__burger-button-icon_active {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+  border-left: 3px solid rgb(194, 144, 45);
+  border-bottom: 3px solid rgb(194, 144, 45);
+  top: 3px;
+  left: 12px;
+}
+
+.navigation__burger-button-icon-second_active {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  transform: rotate(135deg);
+  box-sizing: border-box;
+  border-left: 3px solid rgb(194, 144, 45);
+  border-bottom: 3px solid rgb(194, 144, 45);
+  top: 21px;
+  left: 12px;
+}
 .navigation__button {
   height: 100%;
   background-color: transparent;
@@ -18,4 +79,27 @@
 }
 .navigation__button_active {
   color: rgb(11, 196, 226);
+}
+@media screen and (max-width: 600px) {
+    .navigation__burger-button {
+        display: block;
+    }
+    .navigation {
+        display: none;
+    }
+    .navigation_active {
+        display: flex;
+        height: 180px;
+        position: fixed;
+        flex-direction: column;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color:rgb(17,17,17)
+    }
+    .navigation__button {
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid rgba(255,255,255, .2);
+    }
 }

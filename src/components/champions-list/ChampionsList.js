@@ -12,6 +12,7 @@ function ChampionsList() {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     const loadTimeout = setTimeout(setIsLoading, 2000, false);
     return () => clearTimeout(loadTimeout);
   }, []);

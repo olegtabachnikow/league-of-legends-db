@@ -31,6 +31,7 @@ function ItemList() {
     boolean ? setNextItem(arr) : setPrevItem(arr);
   }
   React.useEffect(() => {
+    window.scrollTo({top: 0,  behavior: 'smooth'});
     getItemList();
   }, []);
 
