@@ -21,7 +21,6 @@ function Item({ item, handleItemList, setCurrentItem }) {
     setIsHovered(bool);
   }
   function handleClick() {
-    console.log(item);
     item.into !== undefined
       ? handleItemList(true, item.into)
       : handleItemList(true, filterSpecialRecipe(true, itemList, item) || []);

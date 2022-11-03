@@ -2,7 +2,7 @@
 
 This project is my pet project used only for practice nad fun.
 I discovered before, that Riot Games have an awesome API and this is a core of this project.
-[Link on repository (now not deployed)](https://github.com/Eskel4ik/league-of-legends-db).
+[Visit website](https://eskel4ik.github.io/league-of-legends-db/).
 
 ## Available functionality
 
