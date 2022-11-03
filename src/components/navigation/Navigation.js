@@ -5,7 +5,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 function Navigation() {
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location.pathname);
   return (
     <nav className="navigation">
       <button

@@ -1,20 +1,20 @@
 export async function getChampions() {
   const response = await fetch(
-    "http://ddragon.leagueoflegends.com/cdn/12.19.1/data/en_US/champion.json"
+    "https://ddragon.leagueoflegends.com/cdn/12.19.1/data/en_US/champion.json"
   );
   return checkResponce(response);
 }
 
 export async function getCurrentChampion(championName) {
   const response = await fetch(
-    `http://ddragon.leagueoflegends.com/cdn/12.19.1/data/en_US/champion/${championName}.json`
+    `https://ddragon.leagueoflegends.com/cdn/12.19.1/data/en_US/champion/${championName}.json`
   );
   return checkResponce(response);
 }
 
 export async function getItems() {
   const response = await fetch(
-    "http://ddragon.leagueoflegends.com/cdn/12.19.1/data/en_US/item.json"
+    "https://ddragon.leagueoflegends.com/cdn/12.19.1/data/en_US/item.json"
   );
   return checkResponce(response);
 }

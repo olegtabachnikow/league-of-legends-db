@@ -1,27 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.fa9776a1.css",
-    "main.js": "/static/js/main.5a22388c.js",
-    "static/media/ahri-picture.png": "/static/media/ahri-picture.20d37e827b5293c77afd.png",
-    "static/media/error-man.png": "/static/media/error-man.dcec359cf96bcf80c764.png",
-    "static/media/jinx.png": "/static/media/jinx.4417452067f30c927bfc.png",
-    "static/media/crystal-orb.png": "/static/media/crystal-orb.cd8a9c1a314fa67891b1.png",
-    "static/media/league-of-legends-logo.png": "/static/media/league-of-legends-logo.cc0769392a6e69beb03f.png",
-    "static/media/lol-logo.png": "/static/media/lol-logo.bf2af4be34aaf340e2e1.png",
-    "static/media/fighter.svg": "/static/media/fighter.f7023a8d11097e2c1203f5eaaeae09e8.svg",
-    "static/media/assassin.svg": "/static/media/assassin.d4ef44af0fbd6768f409cd6047486c8c.svg",
-    "static/media/marksman.svg": "/static/media/marksman.0c14c9e4144b74dd47a48470e06eabb2.svg",
-    "static/media/gold.webp": "/static/media/gold.9fd3b0e02aea1928122c.webp",
-    "static/media/support.svg": "/static/media/support.d98ab512936b3373bd84d77581c25378.svg",
-    "static/media/mage.svg": "/static/media/mage.29ce0bb1bbb12208af225111a4daba7e.svg",
-    "static/media/tank.svg": "/static/media/tank.1ef96b2e85743e68ba870997cacea46c.svg",
-    "index.html": "/index.html",
-    "static/media/search-icon.svg": "/static/media/search-icon.46b68e72b2dbfca6e57e3dfb323914f4.svg",
-    "main.fa9776a1.css.map": "/static/css/main.fa9776a1.css.map",
-    "main.5a22388c.js.map": "/static/js/main.5a22388c.js.map"
+    "main.css": "/league-of-legends-db/static/css/main.6afb7707.css",
+    "main.js": "/league-of-legends-db/static/js/main.d652bd7e.js",
+    "static/media/svg": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.9fea08d9e6ca8149d6fe.svg",
+    "static/media/ahri-picture.png": "/league-of-legends-db/static/media/ahri-picture.20d37e827b5293c77afd.png",
+    "static/media/error-man.png": "/league-of-legends-db/static/media/error-man.dcec359cf96bcf80c764.png",
+    "static/media/jinx.png": "/league-of-legends-db/static/media/jinx.4417452067f30c927bfc.png",
+    "static/media/crystal-orb.png": "/league-of-legends-db/static/media/crystal-orb.cd8a9c1a314fa67891b1.png",
+    "static/media/eot": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.c9bb9fbef4e792f5d23d.eot",
+    "static/media/ttf": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.fbec307af4a65eb444d1.ttf",
+    "static/media/league-of-legends-logo.png": "/league-of-legends-db/static/media/league-of-legends-logo.cc0769392a6e69beb03f.png",
+    "static/media/lol-logo.png": "/league-of-legends-db/static/media/lol-logo.bf2af4be34aaf340e2e1.png",
+    "static/media/woff": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.f3c9f768b44f2d60be4a.woff",
+    "static/media/woff2": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.df9badffa7ed2fb2abdf.woff2",
+    "static/media/fighter.svg": "/league-of-legends-db/static/media/fighter.f7023a8d11097e2c1203f5eaaeae09e8.svg",
+    "static/media/assassin.svg": "/league-of-legends-db/static/media/assassin.d4ef44af0fbd6768f409cd6047486c8c.svg",
+    "static/media/marksman.svg": "/league-of-legends-db/static/media/marksman.0c14c9e4144b74dd47a48470e06eabb2.svg",
+    "static/media/gold.webp": "/league-of-legends-db/static/media/gold.9fd3b0e02aea1928122c.webp",
+    "index.html": "/league-of-legends-db/index.html",
+    "static/media/support.svg": "/league-of-legends-db/static/media/support.d98ab512936b3373bd84d77581c25378.svg",
+    "static/media/mage.svg": "/league-of-legends-db/static/media/mage.29ce0bb1bbb12208af225111a4daba7e.svg",
+    "static/media/tank.svg": "/league-of-legends-db/static/media/tank.1ef96b2e85743e68ba870997cacea46c.svg",
+    "static/media/search-icon.svg": "/league-of-legends-db/static/media/search-icon.46b68e72b2dbfca6e57e3dfb323914f4.svg",
+    "main.6afb7707.css.map": "/league-of-legends-db/static/css/main.6afb7707.css.map",
+    "main.d652bd7e.js.map": "/league-of-legends-db/static/js/main.d652bd7e.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa9776a1.css",
-    "static/js/main.5a22388c.js"
+    "static/css/main.6afb7707.css",
+    "static/js/main.d652bd7e.js"
   ]
 }

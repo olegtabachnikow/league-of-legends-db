@@ -4,19 +4,20 @@ import { Provider } from "react-redux";
 import "./index.css";
 import { store } from "./store/store";
 import App from "./components/app/App";
-import { BrowserRouter } from "react-router-dom";
+//Using hashrouter for deploying on Gh-pages
+import { HashRouter } from "react-router-dom";
 import ErrorBoundry from "./components/error-boundry/ErrorBoundry";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <ErrorBoundry>
-      <Provider store={store}>
-        <BrowserRouter>
+    <HashRouter>
+      <ErrorBoundry>
+        <Provider store={store}>
           <App />
-        </BrowserRouter>
-      </Provider>
-    </ErrorBoundry>
+        </Provider>
+      </ErrorBoundry>
+    </HashRouter>
   </React.StrictMode>
 );
