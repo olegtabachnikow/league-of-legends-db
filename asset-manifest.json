@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/league-of-legends-db/static/css/main.7fd80e4a.css",
+    "main.css": "/league-of-legends-db/static/css/main.9595c9c8.css",
     "main.js": "/league-of-legends-db/static/js/main.686ad59d.js",
+    "static/media/svg": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.9fea08d9e6ca8149d6fe.svg",
     "static/media/ahri-picture.png": "/league-of-legends-db/static/media/ahri-picture.20d37e827b5293c77afd.png",
     "static/media/error-man.png": "/league-of-legends-db/static/media/error-man.dcec359cf96bcf80c764.png",
     "static/media/jinx.png": "/league-of-legends-db/static/media/jinx.4417452067f30c927bfc.png",
     "static/media/crystal-orb.png": "/league-of-legends-db/static/media/crystal-orb.cd8a9c1a314fa67891b1.png",
+    "static/media/eot": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.c9bb9fbef4e792f5d23d.eot",
+    "static/media/ttf": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.fbec307af4a65eb444d1.ttf",
     "static/media/league-of-legends-logo.png": "/league-of-legends-db/static/media/league-of-legends-logo.cc0769392a6e69beb03f.png",
     "static/media/lol-logo.png": "/league-of-legends-db/static/media/lol-logo.bf2af4be34aaf340e2e1.png",
+    "static/media/woff": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.f3c9f768b44f2d60be4a.woff",
+    "static/media/woff2": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.df9badffa7ed2fb2abdf.woff2",
     "static/media/fighter.svg": "/league-of-legends-db/static/media/fighter.f7023a8d11097e2c1203f5eaaeae09e8.svg",
     "static/media/assassin.svg": "/league-of-legends-db/static/media/assassin.d4ef44af0fbd6768f409cd6047486c8c.svg",
     "static/media/marksman.svg": "/league-of-legends-db/static/media/marksman.0c14c9e4144b74dd47a48470e06eabb2.svg",
@@ -17,11 +22,11 @@
     "static/media/mage.svg": "/league-of-legends-db/static/media/mage.29ce0bb1bbb12208af225111a4daba7e.svg",
     "static/media/tank.svg": "/league-of-legends-db/static/media/tank.1ef96b2e85743e68ba870997cacea46c.svg",
     "static/media/search-icon.svg": "/league-of-legends-db/static/media/search-icon.46b68e72b2dbfca6e57e3dfb323914f4.svg",
-    "main.7fd80e4a.css.map": "/league-of-legends-db/static/css/main.7fd80e4a.css.map",
+    "main.9595c9c8.css.map": "/league-of-legends-db/static/css/main.9595c9c8.css.map",
     "main.686ad59d.js.map": "/league-of-legends-db/static/js/main.686ad59d.js.map"
   },
   "entrypoints": [
-    "static/css/main.7fd80e4a.css",
+    "static/css/main.9595c9c8.css",
     "static/js/main.686ad59d.js"
   ]
 }
