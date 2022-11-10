@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "012361fbf486d56b3ae5",
-    "url": "/league-of-legends-db/static/css/main.2fa7e8fe.chunk.css"
+    "revision": "6adfa34dd78799dec6df",
+    "url": "/league-of-legends-db/static/css/main.6af5f13d.chunk.css"
   },
   {
-    "revision": "012361fbf486d56b3ae5",
-    "url": "/league-of-legends-db/static/js/main.012361fb.chunk.js"
+    "revision": "6adfa34dd78799dec6df",
+    "url": "/league-of-legends-db/static/js/main.6adfa34d.chunk.js"
   },
   {
     "revision": "661f720b9b28a79b7b11",
@@ -68,13 +68,13 @@ self.__precacheManifest = [
     "url": "/league-of-legends-db/static/media/crystal-orb.ce64949d.png"
   },
   {
+    "url": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.08a4423f.eot"
+  },
+  {
     "url": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.c14737d5.woff2"
   },
   {
     "url": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.3ba61354.woff"
-  },
-  {
-    "url": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.08a4423f.eot"
   },
   {
     "url": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.12420e8c.ttf"
@@ -87,7 +87,7 @@ self.__precacheManifest = [
     "url": "/league-of-legends-db/static/media/jinx.d0a56457.png"
   },
   {
-    "revision": "9f6207260caab3b101f562c251206e80",
+    "revision": "c656dab5e838809f8ce124bf9d8ac609",
     "url": "/league-of-legends-db/index.html"
   }
 ];
