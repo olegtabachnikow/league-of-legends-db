@@ -7,7 +7,8 @@
   width: 20px;
   transition: transform 0.3s linear;
 }
-.filter-label:hover {
+.filter-label:hover,
+.filter-label:focus {
   height: 100%;
 }
 .filter-label:hover .filter-icon {
@@ -19,6 +20,7 @@
   outline: none;
   border: none;
   border-right: 1px solid rgb(208, 168, 92);
+  border-radius: 0px;
 }
 .filter-input::placeholder {
   text-transform: uppercase;

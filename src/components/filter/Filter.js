@@ -1,16 +1,15 @@
-import React from "react";
-import "./Filter.css";
-import FilterButton from "../filter-button/FilterButton";
-import FilterInput from "../filter-input/FilterInput";
-import { useSelector } from "react-redux";
+import React from 'react';
+import './Filter.css';
+import FilterInput from '../filter-input/FilterInput';
+import { useSelector } from 'react-redux';
 import {
   setDifficulty,
   setSearchTag,
   setCurrentChampionList,
-} from "../../actions/actions";
-import PropTypes from "prop-types";
-import FilterDifficulty from "../filter-difficulty/FilterDifficulty";
-import FilterTags from "../filter-tags/FilterTags";
+} from '../../actions/actions';
+import PropTypes from 'prop-types';
+import FilterDifficulty from '../filter-difficulty/FilterDifficulty';
+import FilterTags from '../filter-tags/FilterTags';
 
 function Filter({ setIsFaded }) {
   const champions = useSelector((state) => state.champions);
@@ -23,11 +22,11 @@ function Filter({ setIsFaded }) {
 
   React.useEffect(() => {
     setDifficulty(0);
-    setSearchTag("All");
+    setSearchTag('All');
   }, []);
 
   function getFilterData(text) {
-    setSearchTag("");
+    setSearchTag('');
     setDifficulty(0);
     setIsFaded(true);
     if (text.trim().length > 0) {
@@ -37,7 +36,7 @@ function Filter({ setIsFaded }) {
       setTimeout(fadedFilterResults, 500, filteredArray);
       return;
     }
-    setSearchTag("All");
+    setSearchTag('All');
     setDifficulty(0);
   }
   function fadedFilterResults(arr) {
@@ -59,7 +58,7 @@ function Filter({ setIsFaded }) {
   const handleFilter = React.useCallback(() => {
     setIsFaded(true);
     let filteredArray = champions.filter((el) => el.tags.includes(searchTag));
-    if (searchTag === "All") {
+    if (searchTag === 'All') {
       filteredArray = champions;
     }
     if (difficulty === 0) {
@@ -81,9 +80,9 @@ function Filter({ setIsFaded }) {
   }, [searchTag, difficulty]);
 
   return (
-    <div className="filter-bar">
-      <div className="triangle triangle-top"></div>
-      <div className="triangle triangle-bottom"></div>
+    <div className='filter-bar'>
+      <div className='triangle triangle-top'></div>
+      <div className='triangle triangle-bottom'></div>
       <FilterInput getFilterData={getFilterData} />
       <FilterTags />
       <FilterDifficulty />

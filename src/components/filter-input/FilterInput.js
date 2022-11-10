@@ -1,6 +1,6 @@
-import React from "react";
-import "./FilterInput.css";
-import PropTypes from "prop-types";
+import React from 'react';
+import './FilterInput.css';
+import PropTypes from 'prop-types';
 import searchIcon from '../../images/search-icon.svg';
 
 function FilterInput({ getFilterData }) {
@@ -16,10 +16,15 @@ function FilterInput({ getFilterData }) {
     1000
   );
   return (
-    <label className="filter-label">
-      <img className="filter-icon" src={searchIcon} alt="search" />
-      <input className="filter-input" type="text" onKeyUp={debouncedHandler} placeholder="Search"/>
-    </label>
+    <div className='filter-label'>
+      <img className='filter-icon' src={searchIcon} alt='search' />
+      <input
+        className='filter-input'
+        type='text'
+        onKeyUp={debouncedHandler}
+        placeholder='Search'
+      />
+    </div>
   );
 }
 FilterInput.propTypes = {
