@@ -1,9 +1,9 @@
 {
   "main.css": "/league-of-legends-db/static/css/main.2fa7e8fe.chunk.css",
-  "main.js": "/league-of-legends-db/static/js/main.ba9118b2.chunk.js",
-  "main.js.map": "/league-of-legends-db/static/js/main.ba9118b2.chunk.js.map",
-  "static/js/1.f52c1524.chunk.js": "/league-of-legends-db/static/js/1.f52c1524.chunk.js",
-  "static/js/1.f52c1524.chunk.js.map": "/league-of-legends-db/static/js/1.f52c1524.chunk.js.map",
+  "main.js": "/league-of-legends-db/static/js/main.012361fb.chunk.js",
+  "main.js.map": "/league-of-legends-db/static/js/main.012361fb.chunk.js.map",
+  "static/js/1.661f720b.chunk.js": "/league-of-legends-db/static/js/1.661f720b.chunk.js",
+  "static/js/1.661f720b.chunk.js.map": "/league-of-legends-db/static/js/1.661f720b.chunk.js.map",
   "runtime~main.js": "/league-of-legends-db/static/js/runtime~main.9c02db11.js",
   "runtime~main.js.map": "/league-of-legends-db/static/js/runtime~main.9c02db11.js.map",
   "static/media/lol-logo.png": "/league-of-legends-db/static/media/lol-logo.5cd814d4.png",
@@ -23,6 +23,6 @@
   "static/media/ItemList.css": "/league-of-legends-db/static/media/jinx.d0a56457.png",
   "static/css/main.2fa7e8fe.chunk.css.map": "/league-of-legends-db/static/css/main.2fa7e8fe.chunk.css.map",
   "index.html": "/league-of-legends-db/index.html",
-  "precache-manifest.41c7dded1a2b166b9248d612f3d35045.js": "/league-of-legends-db/precache-manifest.41c7dded1a2b166b9248d612f3d35045.js",
+  "precache-manifest.4c477c730f8fef2d5c994f8f6602ddcf.js": "/league-of-legends-db/precache-manifest.4c477c730f8fef2d5c994f8f6602ddcf.js",
   "service-worker.js": "/league-of-legends-db/service-worker.js"
 }
