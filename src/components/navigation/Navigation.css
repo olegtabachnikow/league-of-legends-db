@@ -37,9 +37,11 @@
   box-sizing: border-box;
   border-left: 3px solid rgb(194, 144, 45);
   border-bottom: 3px solid rgb(194, 144, 45);
+  transform: rotate(135deg);
   top: 8px;
   left: 12px;
   transition: all 0.3s linear;
+  opacity: 0;
 }
 .navigation__burger-button-icon_active {
   position: absolute;
@@ -57,12 +59,12 @@
   position: absolute;
   width: 15px;
   height: 15px;
-  transform: rotate(135deg);
   box-sizing: border-box;
   border-left: 3px solid rgb(194, 144, 45);
   border-bottom: 3px solid rgb(194, 144, 45);
   top: 21px;
   left: 12px;
+  opacity: 1;
 }
 .navigation__button {
   height: 100%;
