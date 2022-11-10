@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/league-of-legends-db/precache-manifest.c3e6b24067a63198018b982927fcb3c7.js"
+  "/league-of-legends-db/precache-manifest.68b23d7dbc794606ae866ce8f2515d6f.js"
 );
 
 workbox.clientsClaim();
