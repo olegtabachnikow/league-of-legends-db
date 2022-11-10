@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 import { setCharacter } from '../../actions/actions';
 import './ChampionPage.css';
 import { getCurrentChampion } from '../../utils/riot-api';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Preloader from '../preloader/Preloader';
 import mageSvg from '../../images/mage.svg';
 import tankSvg from '../../images/tank.svg';
@@ -14,7 +13,6 @@ import fighterSvg from '../../images/fighter.svg';
 import assassinSvg from '../../images/assassin.svg';
 import SkillSet from '../skill-set/SkillSet';
 import PageButton from '../page-button/PageButton';
-import lolLogo from '../../images/lol-logo.png';
 
 function ChampionPage() {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -116,13 +114,11 @@ function ChampionPage() {
                         onClick={() => setImageCounter(el.num)}
                         key={el.num}
                       >
-                        <LazyLoadImage
+                        <img
                           className='champion-info__skin-image'
                           src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${currentChampion.id}_${el.num}.jpg`}
                           alt={el.name}
-                          width='100%'
-                          height='100%'
-                          placeholderSrc={lolLogo}
+                          loading='lazy'
                         />
                         {el.name === 'default' ? currentChampion.name : el.name}
                       </button>
