@@ -1,9 +1,11 @@
-import React from "react";
-import "./Item.css";
-import PropTypes from "prop-types";
-import { useSelector } from "react-redux";
-import { filterSpecialRecipe } from "../../utils/filters/item-filters";
-import ItemPopup from "../item-popup/ItemPopup";
+import React from 'react';
+import './Item.css';
+import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
+import { filterSpecialRecipe } from '../../utils/filters/item-filters';
+import ItemPopup from '../item-popup/ItemPopup';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import lolLogo from '../../images/lol-logo.png';
 
 function Item({ item, handleItemList, setCurrentItem }) {
   const [isHovered, setIsHovered] = React.useState(false);
@@ -28,20 +30,22 @@ function Item({ item, handleItemList, setCurrentItem }) {
       ? handleItemList(false, item.from)
       : handleItemList(false, filterSpecialRecipe(false, itemList, item) || []);
     setCurrentItem(item);
-    window.scrollTo({top: 0,  behavior: 'smooth'});
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   return (
     <div
       onClick={handleClick}
       onMouseEnter={(e) => handleHover(e, true)}
       onMouseLeave={(e) => handleHover(e, false)}
-      className="item"
+      className='item'
     >
-      <img
-        className="item__image"
+      <LazyLoadImage
+        className='item__image'
         src={`http://ddragon.leagueoflegends.com/cdn/12.19.1/img/item/${item.id}.png`}
         alt={item.name}
-        loading="lazy"
+        width='100%'
+        height='100%'
+        placeholderSrc={lolLogo}
       />
       <ItemPopup
         item={item}
