@@ -68,10 +68,10 @@ self.__precacheManifest = [
     "url": "/league-of-legends-db/static/media/crystal-orb.ce64949d.png"
   },
   {
-    "url": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.c14737d5.woff2"
+    "url": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.08a4423f.eot"
   },
   {
-    "url": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.08a4423f.eot"
+    "url": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.c14737d5.woff2"
   },
   {
     "url": "/league-of-legends-db/static/media/12420e8c141ca7c3dff41de2d59df13e.3ba61354.woff"
