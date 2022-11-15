@@ -56,7 +56,8 @@
   align-items: center;
 }
 .ahri__char-box {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: 400px;
   display: flex;
   justify-content: center;
