@@ -41,7 +41,7 @@ function Item({ item, handleItemList, setCurrentItem }) {
     >
       <LazyLoadImage
         className='item__image'
-        src={`http://ddragon.leagueoflegends.com/cdn/12.19.1/img/item/${item.id}.png`}
+        src={`http://ddragon.leagueoflegends.com/cdn/12.6.1/img/item/${item.id}.png`}
         alt={item.name}
         width='100%'
         height='100%'
